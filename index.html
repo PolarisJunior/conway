@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Conway's Game of Life</title>
+    <meta name="description" content="Conway's Game of Life by PJ Kumlue">
+    <meta name="author" content="PJ Kumlue">
+
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
+
+    <!-- Materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="stylesheets/conway.css">
+
+</head>
+
+<body>
+    <nav class="blue darken-1 nav-extended nav-center" id="control-bar">
+        <div class="nav-wrapper" id="controls">
+            <a class="left brand-logo hide-on-med-and-down">Game of Life</a>
+            <ul id="nav-mobile" class="">
+                <li id="clear-button"><a class="waves-effect waves-light btn"><i
+                            class="material-icons left">autorenew</i>Clear</a></li>
+                <li><a id="start-button" class="waves-effect waves-light btn"><i class="material-icons left"
+                            id="simulate-button-icon">play_arrow</i><span id="simulate-button-text">Begin
+                            Simulation</span></a></li>
+            </ul>
+        </div>
+        <div class="nav-content" id="nav-content-container">
+            <div id="slider-container" class="range-field">
+                <input type="range" min="0" max="100" id="speed-slider">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal teal">
+        <div class="modal-content white-text">
+            <h4 class="left-align">Game of Life</h4>
+            <p class="">Conway's <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"><em
+                        class="teal-text text-accent-1">Game of Life</em></a> is a popular cellular automaton created by
+                mathematician John Horton Conway.
+                With only a handful of
+                simple rules, it can yield amazingly complex emergent behavior. Game of Life is governed
+                by the following four rules:
+            </p>
+            <blockquote class="">
+                <ol>
+                    <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+
+                    <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+
+                    <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+
+                    <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+                    </li>
+                </ol>
+            </blockquote>
+            <p class="">
+                Click on the grid to create live cells. To view patterns other people have
+                discovered, <a href="https://conwaylife.appspot.com/library" class="teal-text text-accent-1">check out
+                    this pattern library.</a>
+                <br>
+                Adjust the <em>slider</em> to change the simulation speed.
+                <br>
+                Once you are ready, press <em>Begin Simulation</em> to start processing the cellular automata.
+            </p>
+
+
+        </div>
+        <div class="modal-footer teal darken-1">
+            <a href="#!" class="center-align modal-close waves-effect waves-green btn-flat white-text">Close</a>
+        </div>
+    </div>
+
+
+    <table id="grid"></table>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/conway.js"></script>
+
+</body>
+
+</html>

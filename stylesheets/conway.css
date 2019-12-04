@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+}
+
+label {
+    font-size: 14px;
+}
+
+/* Use this to override the background color of toggle switches. */
+/* .switch label input[type=checkbox]:checked+.lever {}
+.switch label input[type=checkbox]:checked+.lever:after {
+} */
+
+#grid {
+    font-size: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    /* Necessary to make cell width conform to desired size. */
+    width: auto;
+}
+
+#control-bar {
+    box-shadow: none;
+    /* height: 100px;    
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+#controls {
+    /* display: inline-block;
+    margin: 0 auto; */
+}
+
+#start-button {
+    width: 215px;
+}
+
+#slider-container {
+    width: 362px;
+    margin: 0 auto;
+}
+
+nav {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav.nav-center ul {
+    text-align: center;
+}
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+nav.nav-center ul li a {
+    display: inline-block;
+}
+
+/* #slider-container {
+    display: inline-block;
+} */
+
+/* input[type="range" i] {
+} */
+
+input[type="range"] {
+    border: none;
+}
+
+input[type=range]+.thumb {
+    z-index: 1;
+    background-color: #40c4ff
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background-color: #00b0ff;
+  }
+  input[type=range]::-moz-range-thumb {
+    background-color: #00b0ff;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: #00b0ff;
+  }
+
+.grid-square {
+    border-style: solid;
+    /* border-color: rgb(175, 216, 248); */
+    /* border-color: rgb(220, 220, 220); */
+    border-color: #f5f5f5;
+    border-width: 1px;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.alive {
+    animation: alive-animation 0.3s ease-out 0s 1 normal forwards running;
+    -moz-animation: alive-animation 0.3s ease-out 0s 1 normal forwards running;
+    -webkit-animation: alive-animation 0.3s ease-out 0s 1 normal forwards running;
+}
+
+@keyframes alive-animation {
+    0% {
+        transform: scale(.3);
+        background-color: #0097a7;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: none;
+        /* Cyan */
+        background-color: #0097a7;
+        /* Light blue */
+        /* background-color: #0288d1; */
+    }
+}
+
+.dead {
+    animation: dead-animation .3s ease-out 0s 1 normal none running;
+    -moz-animation: dead-animation .3s ease-out 0s 1 normal none running;
+    -webkit-animation: dead-animation .3s ease-out 0s 1 normal none running;
+}
+
+@keyframes dead-animation {
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    0% {
+        transform: scale(1.0);
+        background-color: #0097a7;
+    }
+}
+
