@@ -1,5 +1,7 @@
 # Conway's Game of Life
 
+<p><a href="https://polarisjunior.github.io/conway/">View the Web App here!</a></p>
+
 <p class="">Conway's <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"><em
             class="teal-text text-accent-1">Game of Life</em></a> is a popular cellular automaton created by
     mathematician John Horton Conway.
